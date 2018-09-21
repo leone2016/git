@@ -1,13 +1,13 @@
 CURSO GIT 
 ===================
 ![](https://git-scm.com/images/logo@2x.png)
-###Datos de git 
+### Datos de git 
 
 * Un dash ( - ) significa que solo se digita un caracter 
 * Dos dash ( -- ) significa que va una palabra 
 ### Ej:
-git status -s **(un dash)**
-git config --global  **(dos dash)**
+* git status -s **(un dash)**
+* git config --global  **(dos dash)**
 
 ## Configuracion Global 
 
@@ -38,8 +38,9 @@ git commit -m "toma una foto" | ** primera foto del los archivos - folders **
 git commit --amend -m "edita comit"  | **edita un commit en el caso que se haya cometido un error **
 git commit | **permite ingresar un mensaje multilinea, para editar hay que presionar A **
 
-###Recuperar cambio al ultimo punto del commit (local)
- `git chechut --.`
+### Recuperar cambio al ultimo punto del commit (local)
+
+`git chechut --.`
 
 ## Verificar commits
 Codigo Git  |  Explicación
@@ -61,13 +62,17 @@ git config --global alias.lg "log --oneline --decorate --all --graph" ** solo ha
 
 
 # VIAJES EN EL TIEMPO GIT 
-git diff **Esto sirve para compara de como esta el archivo antes y despues** 
-git diff --staged ** para comopara  el archivo cuando ya se digito git add . **
-git reset HEAD nombrearchivo.txt  ** Quita el archivo que se encuentre en stage, HEAD hace referencia al ultimo commit que hayamos hecho** 
-git reset --soft HEAD^ (cuando tengo cambios en un archivo debian ser guardados en un commit pasado (HEAD), ojo no hay)
-	* Paso 1: git reset --soft HEAD^   **digitar esto es consola**
-	* Paso 2: git commit -am "poner una descripcion"
-	* No hay que escribir primero git add . ya que esto crearia otro stage para un nuevo commit
+
+Codigo Git  |  Explicación
+------------- | -------------
+git diff | **Esto sirve para compara de como esta el archivo antes y despues** 
+git diff --staged | ** para comopara  el archivo cuando ya se digito git add . **
+git reset HEAD nombrearchivo.txt  | ** Quita el archivo que se encuentre en stage, HEAD hace referencia al ultimo commit que hayamos hecho** 
+git reset --soft HEAD^ | (cuando tengo cambios en un archivo debian ser guardados en un commit pasado (HEAD), ojo no hay)
+
+	Paso 1: git reset --soft HEAD^   **digitar esto es consola**
+	Paso 2: git commit -am "poner una descripcion"
+	No hay que escribir primero git add . ya que esto crearia otro stage para un nuevo commit
 
 	
 ## Viajes en el tiempo
@@ -85,8 +90,9 @@ Si se elimina es necesario digitar
 ## ignorar archivos no deseados
 
 * crear un archivo llamado .gitignore 
-nombre_directorio/ **Todo lo de la carpeta no se agrega**
-*.extAarchivo
+
+	nombre_directorio/ **Todo lo de la carpeta no se agrega**
+	*.extAarchivo
  
 # Ramas 
 
@@ -129,23 +135,27 @@ git show v1.0.0 | ** muestra el mensaje de la version **
 
 ## STASH 
 * Salva todo el proyecto de forma temporal, esto se utiliza por ejemplo cuando se esta trabajando en una funcionalidad pero el Dueño del producto quiere que ya se suba
-ANTES DE HACER COMMIT
-git stash  ó git stash save ** Salva y restaura el ultimo commit ""
 
-git log ** se visualiza un estado WIP (work in Prosses)
-git stash list ** muestra todos los stash creados **
-git stash drop **elimina los stash de la posicion 0 **
-git stash drop ** BORRAR todos los stash**
-git stash apply stash@{1} **restaura el stash den la posicion 1 ** 
+>ANTES DE HACER COMMIT
+
+Codigo Git  |  Explicación
+------------- | -------------
+git stash  ó git stash save | ** Salva y restaura el ultimo commit ""
+git log | ** se visualiza un estado WIP (work in Prosses)
+git stash list | ** muestra todos los stash creados **
+git stash drop | **elimina los stash de la posicion 0 **
+git stash drop | ** BORRAR todos los stash**
+git stash apply stash@{1} | **restaura el stash den la posicion 1 ** 
 git stash pop = git stash apply + git stash drop 
 
 * Mensajes en los Stash 
+
 git stash save "mensaje para tener una identifiacion" 
 
-# GIT REBASE
+## GIT REBASE
 
  
 
-######Crear .md modo grafico [Editor.md](https://pandao.github.io/editor.md/en.html "Heading link")
+###### Crear .md modo grafico [Editor.md](https://pandao.github.io/editor.md/en.html "Heading link")
 
 
