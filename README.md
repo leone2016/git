@@ -11,9 +11,9 @@ CURSO GIT
 
 ## Configuracion Global 
 
-git config --global user.name "leone2016" 
-git config --global user.email "lmedina@gi.com"
-git config --global -e  **(:wq salir)**
+	git config --global user.name "leone2016" 
+	git config --global user.email "lmedina@gi.com"
+	git config --global -e  **(:wq salir)**
 
 ls -al **(lista de todos los archivos y carpetas)**
 ## Hola Mundo GIT
