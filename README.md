@@ -154,6 +154,17 @@ git stash save "mensaje para tener una identifiacion"
 
 ## GIT REBASE
 
+Se planta un problema para un mejor entendimiento
+
+>Tenemos nuestra line del tiempo MASTER (branch) con un commit y se crea una rama llamada misiones completadas
+	
+	|\*
+	| |
+	|\* 
+	| |
+	| |
+   \*/
+
  
 
 ###### Crear .md modo grafico [Editor.md](https://pandao.github.io/editor.md/en.html "Heading link")
