@@ -156,13 +156,50 @@ git stash save "mensaje para tener una identifiacion"
 
 Se planta un problema para un mejor entendimiento
 
-> Tenemos nuestra linea del tiempo **MASTER** (branch) con un commit y se crea una rama llamada **misiones completadas**
->>Despues de trabajar en la rama **misiones completadas** con dos commits, luego de un tiempo otra persona del equipo agrega dos commits a **Master** que son importantes para la rama **misiones completadas** aqui se ejecuta :: 
+> Tenemos nuestra linea del tiempo **MASTER** (branch) con un commit y  se crea una rama llamada **misiones-competadas**
+>>Despues de trabajar en la rama **misiones-competadas** con dos commits, luego de un tiempo otra persona del equipo agrega dos commits a **Master** que son importantes para la rama **misiones-competadas** aqui se ejecuta :: 
+
+[![](https://wac-cdn.atlassian.com/dam/jcr:d3b2abde-d06a-47b6-8955-5f3ef34e0237/03.svg?cdnVersion=jy)](https://wac-cdn.atlassian.com/dam/jcr:d3b2abde-d06a-47b6-8955-5f3ef34e0237/03.svg?cdnVersion=jy)
+
+-- feature = misiones-competadas --
+
+--explicación general--
 
 Codigo Git  |  Explicación
 ------------- | -------------
-git checkout rama-misiones | **crea un area temporal donde mueve los dos commits que tiene esta rama**
-git rebase master	| **luego mueve el puntero de la rama misiones a la de master, despues agrega los dos commits**
+git checkout rama-feature | **se mueve de rama**
+git rebase master	| **luego mueve el puntero de la rama feature a la de master, despues agrega los dos commits de la rama misiones**
+
+### Rebase Iteractivo
+Mueve el numero de commits que se le indique, a un area temporal
+
+Codigo Git  |  Explicación
+------------- | -------------
+git rebase -i HEAD~3  | Mueve los tres ultimos commits
+
+>**Para qué nos serviría eso?**
+	1. Ordenar commits
+	Corregir mensajes de los commits
+	Unir commits
+	Separar commits
+
+## Ejercicio practico Rebase Iteractivo
+Codigo Git  |  Explicación
+------------- | -------------
+git branch  | visualiza las rama existentes
+git chekout rama-misiones-competadas | se mueve de rama
+git rebase master | EN la rama-misiones-competadas se mueve todo arriba de master
+git chekout mastes | nos movemos a Master para realizar un merge con misiones-competadas
+git merge rama-misiones-competadas | dentro de la rama masterdecimos que se una a la rama-misiones-competadas
+
+
+![](https://raw.githubusercontent.com/leone2016/git/master/Captura.JPG)
+>  Ej. antes del rebase--
+
+![](https://raw.githubusercontent.com/leone2016/git/master/despues.JPG)
+>  Ej. despues del rebase
+
+>imagenes tomadas del curso de UDEMY :: GIT+GitHub: Todo un sistema de control de versiones de cero
 
  
 
