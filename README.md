@@ -156,14 +156,13 @@ git stash save "mensaje para tener una identifiacion"
 
 Se planta un problema para un mejor entendimiento
 
->Tenemos nuestra line del tiempo MASTER (branch) con un commit y se crea una rama llamada misiones completadas
-	
-	|\*
-	| |
-	|\* 
-	| |
-	| |
-   \*/
+> Tenemos nuestra linea del tiempo **MASTER** (branch) con un commit y se crea una rama llamada **misiones completadas**
+>>Despues de trabajar en la rama **misiones completadas** con dos commits, luego de un tiempo otra persona del equipo agrega dos commits a **Master** que son importantes para la rama **misiones completadas** aqui se ejecuta :: 
+
+Codigo Git  |  Explicación
+------------- | -------------
+git checkout rama-misiones | **crea un area temporal donde mueve los dos commits que tiene esta rama**
+git rebase master	| **luego mueve el puntero de la rama misiones a la de master, despues agrega los dos commits**
 
  
 
