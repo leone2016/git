@@ -178,6 +178,7 @@ Codigo Git  |  Explicación
 git rebase -i HEAD~3  | Mueve los tres ultimos commits
 
 >**Para qué nos serviría eso?**
+
 	1. Ordenar commits
 	Corregir mensajes de los commits
 	Unir commits
@@ -201,7 +202,22 @@ git merge rama-misiones-competadas | dentro de la rama masterdecimos que se una 
 
 >imagenes tomadas del curso de UDEMY :: GIT+GitHub: Todo un sistema de control de versiones de cero
 
- 
+ ## Rabase - Squash 
+ Cuando se desea unir mas de un commit, ya sea porque son los mismos o por  algun otro problema
+Squash = tener dos cosas que se chocan y se unen.
+
+git rebase -i HEAD~4 | **crea un rebase iteractivo - Muestra los ultimos 4 commits**
+
+> Al ejecutar este comando muestra los 4 commits solicitados ( `pick 158ba9e Descripcion del commit (mas viejo)....`)
+
+>Pasos para Generar Git Squash
+
+	1. git rebase -i HEAD~4
+	2. aparece varios pick, poner s en cualquiere de esos pick ya que eso unirá de abajo hacia arriba
+	3. ingresar el mensaje para unir los commits que se necesite 
+	:wq
+
+
 
 ###### Crear .md modo grafico [Editor.md](https://pandao.github.io/editor.md/en.html "Heading link")
 
