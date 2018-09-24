@@ -217,6 +217,16 @@ git rebase -i HEAD~4 | **crea un rebase iteractivo - Muestra los ultimos 4 commi
 	3. ingresar el mensaje para unir los commits que se necesite 
 	:wq
 
+# GIT REMOTE 
+============
+
+git remote add origin UrlGitremoto
+git remote -v | muestra los diferentes lugares donde se guardados
+git push -u origin master | -u nos ayuda a que la proxima vez que queramos hacer push, no necesitemos especificar la rama
+
+## Git remote tags 
+
+git push --tags
 
 
 ###### Crear .md modo grafico [Editor.md](https://pandao.github.io/editor.md/en.html "Heading link")
