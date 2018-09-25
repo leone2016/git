@@ -191,7 +191,7 @@ git branch  | visualiza las rama existentes
 git chekout rama-misiones-competadas | se mueve de rama
 git rebase master | EN la rama-misiones-competadas se mueve todo arriba de master
 git chekout mastes | nos movemos a Master para realizar un merge con misiones-competadas
-git merge rama-misiones-competadas | dentro de la rama masterdecimos que se una a la rama-misiones-competadas
+git merge rama-misiones-competadas | en la rama master decimos que se una a la rama-misiones-competadas
 
 
 ![](https://raw.githubusercontent.com/leone2016/git/master/Captura.JPG)
