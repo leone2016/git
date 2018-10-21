@@ -129,6 +129,7 @@ git tag | **muesta los tags que tenga**
 git tag -d nombreDelTag | **BOrrar un tag**
 git tag -a v1.0.0 -m "versión 1.0.0" | **crear un tag con version y mensaje**
 git tag | **se muesta solo la version del paso anterior**
+git push --tags | sube los tags al repositorio en la nube
 git tag - v0.1.0 hashCommit -m "mensaje tag" | **AGREGAR UN TAG A UN COMMIT ANTERIOR - hashCommit se lo puede encontrar en git log o en git o bitBucket**
 git show v1.0.0 | **muestra el mensaje de la version**
 
