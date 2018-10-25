@@ -3,7 +3,7 @@ CURSO GIT
 ![](https://git-scm.com/images/logo@2x.png)
 ### Datos de git 
 
-* Un dash ( - ) significa que solo se digita un caracter 
+* Un dash ( - ) significa que solo se digita un carácter 
 * Dos dash ( -- ) significa que va una palabra 
 ### Ej:
 * git status -s **(un dash)**
@@ -17,7 +17,7 @@ CURSO GIT
 
 ls -al **(lista de todos los archivos y carpetas)**
 ## Hola Mundo GIT
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
 git init | inicia
 git status | rojo todo lo que existe nuevo o modificado
@@ -30,31 +30,31 @@ git add --all | **agrega todos los archivos**
 git add <lista de archivos> |  **agrega los archivos que listemos**
 git add pdf/*.pdf  | **Agrega todos los PDFs dentro de la carpeta Pdf**
 git add pdf/ | **Agrega todos los archivos dentro de la carpeta pdf**
-git reset *.xml | **quita todos los archivos xml que esten en el STAGE ( despues de git add )**
+git reset *.xml | **quita todos los archivos xml que estén en el STAGE ( despues de git add )**
 git status | **todo aparece en verde listo para el snapshot - foto**
-git status -s | **muestra una version resumida del status normal**
+git status -s | **muestra una versión resumida del status normal**
 git status -s -b | **muestra simplificado y la rama actual**
-git commit -m "toma una foto" | **primera foto del los archivos - folders**
+git commit -m "toma una foto" | **primera foto de los archivos - folders**
 git commit --amend -m "edita comit"  | **edita un commit en el caso que se haya cometido un error**
-git commit | **permite ingresar un mensaje multilinea, para editar hay que presionar A**
+git commit | **permite ingresar un mensaje multilínea, para editar hay que presionar A**
 
-### Recuperar cambio al ultimo punto del commit (local)
+### Recuperar cambio al último punto del commit (local)
 
-`git chechut --.`
+`git checkut --.`
 
 ## Verificar commits
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
-git log |  **muestra de mas reciente al mas viejo**
+git log |  **muestra de más reciente al más viejo**
 
 ## Informacion git log
 
-* cuando se escribe git log se muestran todos los commits que se hayan realizado, (HEAD->master) se refiere al ultimo commit en la rama actual
+* cuando se escribe git log se muestran todos los commits que se hayan realizado, (HEAD->master) se refiere al último commit en la rama actual
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
-git log --oneline | **muestra una sola linea de git log**
-git log --oneline --decorate --all --graph | **all: muestra la informacion de las diferentes ramas, decorate y graph: se dibija unas viñetas**
+git log --oneline | **muestra una sola línea de git log**
+git log --oneline --decorate --all --graph | **all: muestra la información de las diferentes ramas, decorate y graph: se dibija unas viñetas**
 
 ## ALIAS para comandos git
 
@@ -63,27 +63,27 @@ git config --global alias.lg "log --oneline --decorate --all --graph" **solo hay
 
 # VIAJES EN EL TIEMPO GIT 
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
-git diff | **Esto sirve para compara de como esta el archivo antes y despues**
+git diff | **Esto sirve para comparar cómo está el archivo antes y despues**
 git diff --staged | **para comparar  el archivo cuando ya se digito git add .**
 git reset HEAD nombrearchivo.txt  | **Quita el archivo que se encuentre en stage, HEAD hace referencia al ultimo commit que hayamos hecho**
-git reset --soft HEAD^ | (cuando tengo cambios en un archivo debian ser guardados en un commit pasado (HEAD), ojo no hay)
+git reset --soft HEAD^ | (cuando tengo cambios en un archivo debían  ser guardados en un commit pasado (HEAD), ojo no hay)
 
 	Paso 1: git reset --soft HEAD^   **digitar esto es consola**
-	Paso 2: git commit -am "poner una descripcion"
-	No hay que escribir primero git add . ya que esto crearia otro stage para un nuevo commit
+	Paso 2: git commit -am "poner una descripción"
+	No hay que escribir primero git add . ya que esto crearía otro stage para un nuevo commit
 
 	
 ## Viajes en el tiempo
 
 >clase 20 
 
-## Elimiar o cambiar de nombre a archivos 
+## Eliminar o cambiar de nombre a archivos 
 Si se elimina es necesario digitar 
 
 	git status
-	git add -u **actualiza los artchivos**
+	git add -u **actualiza los archivos**
 	git add -A
 	git add -m "mensaje" 
 
@@ -96,21 +96,21 @@ Si se elimina es necesario digitar
  
 # Ramas 
 
-Las ramas ayudan cuando se quieren agragar funcionalidades a nuestro programa que eventualmente se unan a la rama principal ó a otra rama.
+Las ramas ayudan cuando se quieren agregar funcionalidades a nuestro programa que eventualmente se unan a la rama principal ó a otra rama.
 
-Una nueva rama es una linea en el tiempo totalmente aparte.
+Una nueva rama es una línea en el tiempo totalmente aparte.
 
 
 ## Merge - uniones
-* Fast-forward: se dispara cuando git detecta que no hay ningun cambio en la rama principal y los cambios pueden ser integrados de forma normal o trasparente y cada uno de los commits formaran parte de la rama
-* uniones automatica: git detecta que en la rama principal hubo algun cambio en la rama secundaria, cuando no se modificaron lineas iguales y se visualiza que las ramas se unieron sin problema
-* union manual: git no puede hacerlo de forma automatica 
+* Fast-forward: se dispara cuando git detecta que no hay ningún cambio en la rama principal y los cambios pueden ser integrados de forma normal o trasparente y cada uno de los commits formaran parte de la rama
+* uniones automáticas: git detecta que en la rama principal hubo algun cambio en la rama secundaria, cuando no se modificaron líneas iguales y se visualiza que las ramas se unieron sin problema
+* unión  manual: git no puede hacerlo de forma automática 
 
 # Practica de Merge  Fast-forward:
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
-git branch nombreNuevaRama  | **suponiendo el caso que tengo una funcionalidad que aun no se si esta bien o si se va a implementar**
+git branch nombreNuevaRama  | **suponiendo el caso que tengo una funcionalidad que aun no se si está bien o si se va a implementar**
 git branch | **muestra las ramas actuales**
 git checkout nombreRamaAcambiar | **para cambiar de una rama a otra**
 git checkout -b nombreRamaAcambiar | **para cambiar de una rama a otra (-b) se mueve a la nueva rama**
@@ -120,91 +120,91 @@ git branch -d nombreRama | **ELIMINA la rama que ya no se necesite**
 
 
 ## TAG - Etiquetas 
-> Se utilizapara marcar releases de nuestra aplicacion ó programa. 
+> Se utiliza para marcar releases de nuestra aplicación ó programa. 
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
 git tag nombreDeltag  | **crear un tag**
-git tag | **muesta los tags que tenga**
+git tag | **muestra  los tags que tenga**
 git tag -d nombreDelTag | **BOrrar un tag**
-git tag -a v1.0.0 -m "versión 1.0.0" | **crear un tag con version y mensaje**
-git tag | **se muesta solo la version del paso anterior**
+git tag -a v1.0.0 -m "versión 1.0.0" | **crear un tag con versión y mensaje**
+git tag | **se muestra  solo la versión  del paso anterior**
 git push --tags | sube los tags al repositorio en la nube
 git tag - v0.1.0 hashCommit -m "mensaje tag" | **AGREGAR UN TAG A UN COMMIT ANTERIOR - hashCommit se lo puede encontrar en git log o en git o bitBucket**
-git show v1.0.0 | **muestra el mensaje de la version**
+git show v1.0.0 | **muestra el mensaje de la versión **
 
 
 ## STASH 
-* Salva todo el proyecto de forma temporal, esto se utiliza por ejemplo cuando se esta trabajando en una funcionalidad pero el Dueño del producto quiere que ya se suba
+* Salva todo el proyecto de forma temporal, esto se utiliza por ejemplo cuando se está trabajando en una funcionalidad, pero el Dueño del producto quiere que ya se suba
 
 >ANTES DE HACER COMMIT
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
 git stash  ó git stash save | **Salva y restaura el ultimo commit**
 git log | **se visualiza un estado WIP (work in Prosses)**
 git stash list | **muestra todos los stash creados**
-git stash drop | **elimina los stash de la posicion 0**
+git stash drop | **elimina los stash de la posición  0**
 git stash drop | **BORRAR todos los stash**
-git stash apply stash@{1} | **restaura el stash den la posicion 1**
+git stash apply stash@{1} | **restaura el stash den la posición  1**
 git stash pop = git stash apply + git stash drop 
 
 * Mensajes en los Stash 
 
-git stash save "mensaje para tener una identifiacion" 
+git stash save "mensaje para tener una identificación" 
 
 ## GIT REBASE
 
 Se planta un problema para un mejor entendimiento
 
-> Tenemos nuestra linea del tiempo **MASTER** (branch) con un commit y  se crea una rama llamada **misiones-competadas**
->>Despues de trabajar en la rama **misiones-competadas** con dos commits, luego de un tiempo otra persona del equipo agrega dos commits a **Master** que son importantes para la rama **misiones-competadas** aqui se ejecuta :: 
+> Tenemos nuestra línea del tiempo **MASTER** (branch) con un commit y  se crea una rama llamada **misiones-completadas**
+>>Después  de trabajar en la rama **misiones-completadas** con dos commits, luego de un tiempo otra persona del equipo agrega dos commits a **Master** que son importantes para la rama **misiones-competadas** aqui se ejecuta :: 
 
 [![](https://wac-cdn.atlassian.com/dam/jcr:d3b2abde-d06a-47b6-8955-5f3ef34e0237/03.svg?cdnVersion=jy)](https://wac-cdn.atlassian.com/dam/jcr:d3b2abde-d06a-47b6-8955-5f3ef34e0237/03.svg?cdnVersion=jy)
 
--- feature = misiones-competadas --
+-- feature = misiones-completadas --
 
 --explicación general--
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
 git checkout rama-feature | **se mueve de rama**
-git rebase master	| **luego mueve el puntero de la rama feature a la de master, despues agrega los dos commits de la rama misiones**
+git rebase master	| **luego mueve el puntero de la rama feature a la de master, después agrega los dos commits de la rama misiones**
 
 ### Rebase Iteractivo
-Mueve el numero de commits que se le indique, a un area temporal
+Mueve el número de commits que se le indique, a un área temporal
 
-Codigo Git  |  Explicación
+Código Git  |  Explicación
 ------------- | -------------
-git rebase -i HEAD~3  | Mueve los tres ultimos commits
+git rebase -i HEAD~3  | Mueve los tres últimos commits
 
->**Para qué nos serviría eso?**
+>**¿Para qué nos serviría eso?**
 
 	1. Ordenar commits
 	Corregir mensajes de los commits
 	Unir commits
 	Separar commits
 
-## Ejercicio practico Rebase Iteractivo
-Codigo Git  |  Explicación
+## Ejercicio práctico Rebase Iteractivo
+Código Git  |  Explicación
 ------------- | -------------
 git branch  | visualiza las rama existentes
-git chekout rama-misiones-competadas | se mueve de rama
-git rebase master | EN la rama-misiones-competadas se mueve todo arriba de master
-git chekout mastes | nos movemos a Master para realizar un merge con misiones-competadas
-git merge rama-misiones-competadas | en la rama master decimos que se una a la rama-misiones-competadas
+git chekout rama-misiones-completadas | se mueve de rama
+git rebase master | EN la rama-misiones-completadas se mueve todo arriba de master
+git chekout mastes | nos movemos a Master para realizar un merge con misiones-completadas
+git merge rama-misiones-completadas | en la rama master decimos que se una a la rama-misiones-completadas
 
 
 ![](https://raw.githubusercontent.com/leone2016/git/master/Captura.JPG)
 >  Ej. antes del rebase--
 
 ![](https://raw.githubusercontent.com/leone2016/git/master/despues.JPG)
->  Ej. despues del rebase
+>  Ej. después  del rebase
 
 >imagenes tomadas del curso de UDEMY :: GIT+GitHub: Todo un sistema de control de versiones de cero
 
- ## Rabase - Squash 
- Cuando se desea unir mas de un commit, ya sea porque son los mismos o por  algun otro problema
+ ## Rebase - Squash 
+ Cuando se desea unir más de un commit, ya sea porque son los mismos o por  algun otro problema
 Squash = tener dos cosas que se chocan y se unen.
 
 git rebase -i HEAD~4 | **crea un rebase iteractivo - Muestra los ultimos 4 commits**
@@ -214,7 +214,7 @@ git rebase -i HEAD~4 | **crea un rebase iteractivo - Muestra los ultimos 4 commi
 >Pasos para Generar Git Squash
 
 	1. git rebase -i HEAD~4
-	2. aparece varios pick, poner s en cualquiere de esos pick ya que eso unirá de abajo hacia arriba
+	2. aparece varios pick, poner s en cualquiera de esos pick ya que eso unirá de abajo hacia arriba
 	3. ingresar el mensaje para unir los commits que se necesite 
 	:wq
 
@@ -223,7 +223,7 @@ git rebase -i HEAD~4 | **crea un rebase iteractivo - Muestra los ultimos 4 commi
 
 git remote add origin UrlGitremoto
 git remote -v | muestra los diferentes lugares donde se guardados
-git push -u origin master | -u nos ayuda a que la proxima vez que queramos hacer push, no necesitemos especificar la rama
+git push -u origin master | -u nos ayuda a que la próxima vez que queramos hacer push, no necesitemos especificar la rama
 
 ## Git remote tags 
 
